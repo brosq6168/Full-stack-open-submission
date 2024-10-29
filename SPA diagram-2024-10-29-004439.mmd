@@ -1,0 +1,24 @@
+sequenceDiagram
+Participant browser
+Participant server
+
+browser->>server: Get https://studies.cs.helsinki.fi/exampleapp/spa
+activate server
+server->>browser: HTML document
+deactivate server
+
+browser->>server: Get https://studies.cs.helsinki.fi/exampleapp/main.css
+activate server
+server->>browser: the CSS file
+deactivate server
+
+browser->>server: Get https://studies.cs.helsinki.fi/exampleapp/main.js
+activate server
+server->>browser: the Javascript file
+deactivate server
+
+browser->>server: Get https://studies.cs.helsinki.fi/exampleapp/data.json
+activate browser
+server->>browser: [{content}]
+deactivate server
+
