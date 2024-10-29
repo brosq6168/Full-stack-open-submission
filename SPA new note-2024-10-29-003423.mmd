@@ -1,0 +1,29 @@
+'''mermaid
+sequenceDiagram
+participant browser
+participant server
+
+browser->>server: Get https://studies.cs.helsinki.fi/exampleapp/spa
+activate server
+server->>browser: HMTL document
+deactivate server
+
+browser->>server: Get https://studies.cs.helsinki.fi/exampleapp/main.css
+activate server
+server->>browser: the CSS file
+deactivate server
+
+browser->>server: Get https://studies.cs.helsinki.fi/exampleapp/spa.js
+activate server
+server->>browser: the Javascript file
+
+browser->>server: Get https://studies.cs.helsinki.fi/exampleapp/data.json
+activate server
+server->>browser: [{content}]
+deactivate server
+
+browser->>server: Post https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+activate server
+server->>browser: [{ "content": "In the course of the year", "date": "2024-10-29" }, ... ]
+deactivate server
+''''
